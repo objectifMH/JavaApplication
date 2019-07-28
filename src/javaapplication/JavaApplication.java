@@ -35,8 +35,6 @@ public class JavaApplication {
             _abs++;
         }
         return _debOrd++;
-        //return 
-
     }
 
     public static int limitAbs() {
@@ -77,7 +75,7 @@ public class JavaApplication {
         Scanner sc = new Scanner(System.in);
         int taille = sc.nextInt();
         int tailleTotale = taille * taille;
-        
+
         tab = new int[taille][taille];
 
         _limitAbs = taille - 1;
