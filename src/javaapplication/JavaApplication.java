@@ -16,52 +16,52 @@ public class JavaApplication {
 
     public static boolean isInc = true;
 
-    public static int _debOrd = 0;
-    public static int _debAbs = 0;
+    public static int debOrd = 0;
+    public static int debAbs = 0;
 
-    public static int _cpt = 1;
+    public static int cpt = 1;
     public static int tab[][] = null;
 
-    public static int _abs = 0;
-    public static int _limitAbs;
+    public static int abs = 0;
+    public static int limitAbs;
 
-    public static int _ord = 0;
-    public static int _limitOrd;
+    public static int ord = 0;
+    public static int limitOrd;
 
     public static int debOrd() {
-        while (_abs < _limitAbs) {
-            tab[_abs][_ord] = _cpt;
-            _cpt++;
-            _abs++;
+        while (abs < limitAbs) {
+            tab[abs][ord] = cpt;
+            cpt++;
+            abs++;
         }
-        return _debOrd++;
+        return debOrd++;
     }
 
     public static int limitAbs() {
-        while (_ord < _limitOrd) {
-            tab[_abs][_ord] = _cpt;
-            _cpt++;
-            _ord++;
+        while (ord < limitOrd) {
+            tab[abs][ord] = cpt;
+            cpt++;
+            ord++;
         }
-        return _limitAbs--;
+        return limitAbs--;
     }
 
     public static int limitOrd() {
-        while (_abs > _debAbs) {
-            tab[_abs][_ord] = _cpt;
-            _cpt++;
-            _abs--;
+        while (abs > debAbs) {
+            tab[abs][ord] = cpt;
+            cpt++;
+            abs--;
         }
-        return _limitOrd--;
+        return limitOrd--;
     }
 
     public static int debAbs() {
-        while (_ord > _debOrd) {
-            tab[_abs][_ord] = _cpt;
-            _cpt++;
-            _ord--;
+        while (ord > debOrd) {
+            tab[abs][ord] = cpt;
+            cpt++;
+            ord--;
         }
-        return _debAbs++;
+        return debAbs++;
     }
 
     /**
@@ -78,10 +78,10 @@ public class JavaApplication {
 
         tab = new int[taille][taille];
 
-        _limitAbs = taille - 1;
-        _limitOrd = taille - 1;
+        limitAbs = taille - 1;
+        limitOrd = taille - 1;
 
-        while (_cpt < tailleTotale) {
+        while (cpt < tailleTotale) {
             if (isInc == true) {
                 debOrd();
                 limitAbs();
@@ -94,7 +94,7 @@ public class JavaApplication {
             }
 
         }
-        tab[_abs][_ord] = _cpt;
+        tab[abs][ord] = cpt;
 
         System.out.println("Mon Colimaçon");
         for (int i = 0; i < taille; i++) {
